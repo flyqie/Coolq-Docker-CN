@@ -7,4 +7,4 @@ RUN sed -i 's#/archive.ubuntu.com/#/mirrors.ustc.edu.cn/#g' /etc/apt/sources.lis
 RUN apt update
 
 # Dns
-RUN echo 'YXB0IGF1dG9yZW1vdmUgLXkgcmVzb2x2Y29uZgplY2hvICduYW1lc2VydmVyIDguOC44LjgnID4+IC9ldGMvcmVzb2x2LmNvbmYKZWNobyAnbmFtZXNlcnZlciA4LjguNC40JyA+PiAvZXRjL3Jlc29sdi5jb25mCmNoYXR0ciAraSAvZXRjL3Jlc29sdi5jb25m' | base64 -d | > /etc/cont-init.d/100-set-dns
+RUN echo 'IyEvdXNyL2Jpbi93aXRoLWNvbnRlbnYgL2Jpbi9iYXNoCmFwdCBhdXRvcmVtb3ZlIC15IHJlc29sdmNvbmYKZWNobyAnbmFtZXNlcnZlciA4LjguOC44JyA+PiAvZXRjL3Jlc29sdi5jb25mCmVjaG8gJ25hbWVzZXJ2ZXIgOC44LjQuNCcgPj4gL2V0Yy9yZXNvbHYuY29uZgpjaGF0dHIgK2kgL2V0Yy9yZXNvbHYuY29uZg==' | base64 -d | > /etc/cont-init.d/100-set-dns
